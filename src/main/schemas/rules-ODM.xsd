@@ -35,6 +35,7 @@
             <xs:element ref="ShowAction" minOccurs="0" maxOccurs="unbounded"/>
             <xs:element ref="HideAction" minOccurs="0" maxOccurs="unbounded"/>
             <xs:element ref="InsertAction" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="EventAction" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
         <xs:attributeGroup ref="RuleRefAttributeType"/>
     </xs:complexType>
