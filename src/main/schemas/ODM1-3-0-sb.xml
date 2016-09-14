@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ODM Archival="Yes" AsOfDateTime="2001-12-31T12:00:00" CreationDateTime="2001-12-31T12:00:00" Description="" FileOID="" FileType="Snapshot" Granularity="All" Id="idvalue0" ODMVersion="" Originator="" PriorFileOID="" SourceSystem="" SourceSystemVersion="" xmlns="http://www.cdisc.org/ns/odm/v1.3-sb" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.cdisc.org/ns/odm/v1.3-sb ODM1-3-0-sb.xsd ">
+  <Study OID="">
+    <GlobalVariables>
+      <StudyName>StudyName</StudyName>
+      <StudyDescription>StudyDescription</StudyDescription>
+      <ProtocolName>ProtocolName</ProtocolName>
+    </GlobalVariables>
+    <BasicDefinitions>
+      <MeasurementUnit Name="" OID="">
+        <Symbol>
+          <TranslatedText lang="EN">TranslatedText</TranslatedText>
+        </Symbol>
+      </MeasurementUnit>
+    </BasicDefinitions>
+    <MetaDataVersion Description="" Name="" OID="">
+      <Include MetaDataVersionOID="" StudyOID=""/>
+      <Protocol>
+        <Description>
+          <TranslatedText lang="EN">TranslatedText</TranslatedText>
+        </Description>
+        <StudyEventRef CollectionExceptionConditionOID="" Mandatory="Yes" OrderNumber="0" StudyEventOID=""/>
+      </Protocol>
+      <StudyEventDef Category="" Name="" OID="" Repeating="Yes" Type="Scheduled">
+        <Description>
+          <TranslatedText lang="EN">TranslatedText</TranslatedText>
+        </Description>
+        <FormRef CollectionExceptionConditionOID="" FormOID="" Mandatory="Yes" OrderNumber="0"/>
+      </StudyEventDef>
+      <FormDef Name="" OID="" Repeating="Yes">
+        <Description>
+          <TranslatedText lang="EN">TranslatedText</TranslatedText>
+        </Description>
+        <ItemGroupRef CollectionExceptionConditionOID="" ItemGroupOID="" Mandatory="Yes" OrderNumber="0"/>
+        <ArchiveLayout OID="" PdfFileName="" PresentationOID=""/>
+      </FormDef>
+      <ItemGroupDef Comment="" Domain="" IsReferenceData="Yes" Name="" OID="" Origin="" Purpose="" Repeating="Yes" Role="" SASDatasetName="">
+        <Description>
+          <TranslatedText lang="EN">TranslatedText</TranslatedText>
+        </Description>
+        <ItemRef CollectionExceptionConditionOID="" ImputationMethodOID="" ItemOID="" KeySequence="0" Mandatory="Yes" MethodOID="" OrderNumber="0" Role="NMTOKENS" RoleCodeListOID=""/>
+        <Alias Context="" Name=""/>
+      </ItemGroupDef>
+      <ItemDef Comment="" DataType="integer" Length="1" Name="" OID="" Origin="" SASFieldName="" SDSVarName="" SignificantDigits="0">
+        <Description>
+          <TranslatedText lang="EN">TranslatedText</TranslatedText>
+        </Description>
+        <Question>
+          <TranslatedText lang="EN">TranslatedText</TranslatedText>
+        </Question>
+        <ExternalQuestion Code="" Dictionary="" Version=""/>
+        <MeasurementUnitRef MeasurementUnitOID=""/>
+        <RangeCheck Comparator="LT" SoftHard="Soft">
+          <CheckValue>CheckValue</CheckValue>
+          <MeasurementUnitRef MeasurementUnitOID=""/>
+          <ErrorMessage>
+            <TranslatedText lang="EN">TranslatedText</TranslatedText>
+          </ErrorMessage>
+        </RangeCheck>
+        <CodeListRef CodeListOID=""/>
+        <Role>Role</Role>
+        <Alias Context="" Name=""/>
+      </ItemDef>
+      <CodeList DataType="integer" Name="" OID="" SASFormatName="">
+        <CodeListItem CodedValue="" Rank="0.0">
+          <Decode>
+            <TranslatedText lang="EN">TranslatedText</TranslatedText>
+          </Decode>
+        </CodeListItem>
+      </CodeList>
+      <ImputationMethod OID="">ImputationMethod</ImputationMethod>
+      <Presentation OID="" lang="EN">Presentation</Presentation>
+      <ConditionDef Name="" OID="">
+        <Description>
+          <TranslatedText lang="EN">TranslatedText</TranslatedText>
+        </Description>
+        <FormalExpression Context="">FormalExpression</FormalExpression>
+      </ConditionDef>
+      <MethodDef Name="" OID="" Type="Computation">
+        <Description>
+          <TranslatedText lang="EN">TranslatedText</TranslatedText>
+        </Description>
+        <FormalExpression Context="">FormalExpression</FormalExpression>
+      </MethodDef>
+    </MetaDataVersion>
+  </Study>
+  <AdminData StudyOID="">
+    <User OID="" UserType="Sponsor">
+      <LoginName>LoginName</LoginName>
+      <DisplayName>DisplayName</DisplayName>
+      <FullName>FullName</FullName>
+      <FirstName>FirstName</FirstName>
+      <LastName>LastName</LastName>
+      <Organization>Organization</Organization>
+      <Address>
+        <StreetName>StreetName</StreetName>
+        <City>City</City>
+        <StateProv>StateProv</StateProv>
+        <Country>Country</Country>
+        <PostalCode>PostalCode</PostalCode>
+        <OtherText>OtherText</OtherText>
+      </Address>
+      <Email>Email</Email>
+      <Picture ImageType="" PictureFileName=""/>
+      <Pager>Pager</Pager>
+      <Fax>Fax</Fax>
+      <Phone>Phone</Phone>
+      <LocationRef LocationOID=""/>
+      <Certificate>Certificate</Certificate>
+    </User>
+    <Location LocationType="Sponsor" Name="" OID="">
+      <MetaDataVersionRef EffectiveDate="2001-01-01" MetaDataVersionOID="" StudyOID=""/>
+    </Location>
+    <SignatureDef Methodology="Digital" OID="">
+      <Meaning>Meaning</Meaning>
+      <LegalReason>LegalReason</LegalReason>
+    </SignatureDef>
+  </AdminData>
+  <ReferenceData MetaDataVersionOID="" StudyOID="">
+    <ItemGroupData ItemGroupOID="" ItemGroupRepeatKey="" TransactionType="Insert">
+      <AuditRecord EditPoint="Monitoring" ID="idvalue1" UsedImputationMethod="Yes">
+        <UserRef UserOID=""/>
+        <LocationRef LocationOID=""/>
+        <DateTimeStamp>2001-12-31T12:00:00</DateTimeStamp>
+        <ReasonForChange>ReasonForChange</ReasonForChange>
+        <SourceID>SourceID</SourceID>
+      </AuditRecord>
+      <Signature ID="idvalue2">
+        <UserRef UserOID=""/>
+        <LocationRef LocationOID=""/>
+        <SignatureRef SignatureOID=""/>
+        <DateTimeStamp>2001-12-31T12:00:00</DateTimeStamp>
+        <CryptoBindingManifest>CryptoBindingManifest</CryptoBindingManifest>
+      </Signature>
+      <Annotation ID="idvalue3" SeqNum="0" TransactionType="Insert">
+        <Comment SponsorOrSite="Sponsor">Comment</Comment>
+        <Flag>
+          <FlagValue CodeListOID="">FlagValue</FlagValue>
+          <FlagType CodeListOID="">FlagType</FlagType>
+        </Flag>
+      </Annotation>
+    </ItemGroupData>
+  </ReferenceData>
+  <ClinicalData MetaDataVersionOID="" StudyOID="">
+    <SubjectData SubjectKey="" TransactionType="Insert">
+      <AuditRecord EditPoint="Monitoring" ID="idvalue4" UsedImputationMethod="Yes">
+        <UserRef UserOID=""/>
+        <LocationRef LocationOID=""/>
+        <DateTimeStamp>2001-12-31T12:00:00</DateTimeStamp>
+        <ReasonForChange>ReasonForChange</ReasonForChange>
+        <SourceID>SourceID</SourceID>
+      </AuditRecord>
+      <Signature ID="idvalue5">
+        <UserRef UserOID=""/>
+        <LocationRef LocationOID=""/>
+        <SignatureRef SignatureOID=""/>
+        <DateTimeStamp>2001-12-31T12:00:00</DateTimeStamp>
+        <CryptoBindingManifest>CryptoBindingManifest</CryptoBindingManifest>
+      </Signature>
+      <InvestigatorRef UserOID=""/>
+      <SiteRef LocationOID=""/>
+      <Annotation ID="idvalue6" SeqNum="0" TransactionType="Insert">
+        <Comment SponsorOrSite="Sponsor">Comment</Comment>
+        <Flag>
+          <FlagValue CodeListOID="">FlagValue</FlagValue>
+          <FlagType CodeListOID="">FlagType</FlagType>
+        </Flag>
+      </Annotation>
+      <StudyEventData StudyEventOID="" StudyEventRepeatKey="" TransactionType="Insert">
+        <AuditRecord EditPoint="Monitoring" ID="idvalue7" UsedImputationMethod="Yes">
+          <UserRef UserOID=""/>
+          <LocationRef LocationOID=""/>
+          <DateTimeStamp>2001-12-31T12:00:00</DateTimeStamp>
+          <ReasonForChange>ReasonForChange</ReasonForChange>
+          <SourceID>SourceID</SourceID>
+        </AuditRecord>
+        <Signature ID="idvalue8">
+          <UserRef UserOID=""/>
+          <LocationRef LocationOID=""/>
+          <SignatureRef SignatureOID=""/>
+          <DateTimeStamp>2001-12-31T12:00:00</DateTimeStamp>
+          <CryptoBindingManifest>CryptoBindingManifest</CryptoBindingManifest>
+        </Signature>
+        <Annotation ID="idvalue9" SeqNum="0" TransactionType="Insert">
+          <Comment SponsorOrSite="Sponsor">Comment</Comment>
+          <Flag>
+            <FlagValue CodeListOID="">FlagValue</FlagValue>
+            <FlagType CodeListOID="">FlagType</FlagType>
+          </Flag>
+        </Annotation>
+        <FormData FormOID="" FormRepeatKey="" TransactionType="Insert">
+          <AuditRecord EditPoint="Monitoring" ID="idvalue10" UsedImputationMethod="Yes">
+            <UserRef UserOID=""/>
+            <LocationRef LocationOID=""/>
+            <DateTimeStamp>2001-12-31T12:00:00</DateTimeStamp>
+            <ReasonForChange>ReasonForChange</ReasonForChange>
+            <SourceID>SourceID</SourceID>
+          </AuditRecord>
+          <Signature ID="idvalue11">
+            <UserRef UserOID=""/>
+            <LocationRef LocationOID=""/>
+            <SignatureRef SignatureOID=""/>
+            <DateTimeStamp>2001-12-31T12:00:00</DateTimeStamp>
+            <CryptoBindingManifest>CryptoBindingManifest</CryptoBindingManifest>
+          </Signature>
+          <ArchiveLayoutRef ArchiveLayoutOID=""/>
+          <Annotation ID="idvalue12" SeqNum="0" TransactionType="Insert">
+            <Comment SponsorOrSite="Sponsor">Comment</Comment>
+            <Flag>
+              <FlagValue CodeListOID="">FlagValue</FlagValue>
+              <FlagType CodeListOID="">FlagType</FlagType>
+            </Flag>
+          </Annotation>
+          <ItemGroupData ItemGroupOID="" ItemGroupRepeatKey="" TransactionType="Insert">
+            <AuditRecord EditPoint="Monitoring" ID="idvalue13" UsedImputationMethod="Yes">
+              <UserRef UserOID=""/>
+              <LocationRef LocationOID=""/>
+              <DateTimeStamp>2001-12-31T12:00:00</DateTimeStamp>
+              <ReasonForChange>ReasonForChange</ReasonForChange>
+              <SourceID>SourceID</SourceID>
+            </AuditRecord>
+            <Signature ID="idvalue14">
+              <UserRef UserOID=""/>
+              <LocationRef LocationOID=""/>
+              <SignatureRef SignatureOID=""/>
+              <DateTimeStamp>2001-12-31T12:00:00</DateTimeStamp>
+              <CryptoBindingManifest>CryptoBindingManifest</CryptoBindingManifest>
+            </Signature>
+            <Annotation ID="idvalue15" SeqNum="0" TransactionType="Insert">
+              <Comment SponsorOrSite="Sponsor">Comment</Comment>
+              <Flag>
+                <FlagValue CodeListOID="">FlagValue</FlagValue>
+                <FlagType CodeListOID="">FlagType</FlagType>
+              </Flag>
+            </Annotation>
+          </ItemGroupData>
+        </FormData>
+      </StudyEventData>
+    </SubjectData>
+    <AuditRecords>
+      <AuditRecord EditPoint="Monitoring" ID="idvalue16" UsedImputationMethod="Yes">
+        <UserRef UserOID=""/>
+        <LocationRef LocationOID=""/>
+        <DateTimeStamp>2001-12-31T12:00:00</DateTimeStamp>
+        <ReasonForChange>ReasonForChange</ReasonForChange>
+        <SourceID>SourceID</SourceID>
+      </AuditRecord>
+    </AuditRecords>
+    <Signatures>
+      <Signature ID="idvalue17">
+        <UserRef UserOID=""/>
+        <LocationRef LocationOID=""/>
+        <SignatureRef SignatureOID=""/>
+        <DateTimeStamp>2001-12-31T12:00:00</DateTimeStamp>
+        <CryptoBindingManifest>CryptoBindingManifest</CryptoBindingManifest>
+      </Signature>
+    </Signatures>
+    <Annotations>
+      <Annotation ID="idvalue18" SeqNum="0" TransactionType="Insert">
+        <Comment SponsorOrSite="Sponsor">Comment</Comment>
+        <Flag>
+          <FlagValue CodeListOID="">FlagValue</FlagValue>
+          <FlagType CodeListOID="">FlagType</FlagType>
+        </Flag>
+      </Annotation>
+    </Annotations>
+  </ClinicalData>
+  <Association MetaDataVersionOID="" StudyOID="">
+    <KeySet FormOID="" FormRepeatKey="" ItemGroupOID="" ItemGroupRepeatKey="" ItemOID="" OID="" StudyEventOID="" StudyEventRepeatKey="" StudyOID="" SubjectKey=""/>
+    <KeySet FormOID="" FormRepeatKey="" ItemGroupOID="" ItemGroupRepeatKey="" ItemOID="" OID="" StudyEventOID="" StudyEventRepeatKey="" StudyOID="" SubjectKey=""/>
+    <Annotation ID="idvalue19" SeqNum="0" TransactionType="Insert">
+      <Comment SponsorOrSite="Sponsor">Comment</Comment>
+      <Flag>
+        <FlagValue CodeListOID="">FlagValue</FlagValue>
+        <FlagType CodeListOID="">FlagType</FlagType>
+      </Flag>
+    </Annotation>
+  </Association>
+  <Signature Id="idvalue20">
+    <SignedInfo Id="idvalue21">
+      <CanonicalizationMethod Algorithm="http://tempuri.org"/>
+      <SignatureMethod Algorithm="http://tempuri.org">
+        <HMACOutputLength>0</HMACOutputLength>
+      </SignatureMethod>
+      <Reference Id="idvalue22" Type="http://tempuri.org" URI="http://tempuri.org">
+        <Transforms>
+          <Transform Algorithm="http://tempuri.org">
+            <XPath>XPath</XPath>
+          </Transform>
+        </Transforms>
+        <DigestMethod Algorithm="http://tempuri.org"/>
+        <DigestValue>MA==</DigestValue>
+      </Reference>
+    </SignedInfo>
+    <SignatureValue Id="idvalue23">MA==</SignatureValue>
+    <KeyInfo Id="idvalue24">
+      <KeyName>KeyName</KeyName>
+    </KeyInfo>
+    <Object Encoding="http://tempuri.org" Id="idvalue25" MimeType="">
+      <SPKIData>
+        <SPKISexp>MA==</SPKISexp>
+      </SPKIData>
+    </Object>
+  </Signature>
+</ODM>
