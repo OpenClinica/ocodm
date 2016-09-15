@@ -18,9 +18,19 @@
             <jaxb:package name="org.cdisc.ns.odm.v130_api" />
         </jaxb:schemaBindings>
     </jaxb:bindings>
+    <jaxb:bindings schemaLocation="../schemas/ODM1-3-0-sb-foundation.xsd">
+        <jaxb:schemaBindings>
+            <jaxb:package name="org.cdisc.ns.odm.v130_sb" />
+        </jaxb:schemaBindings>
+    </jaxb:bindings>
     <jaxb:bindings schemaLocation="../schemas/OpenClinica-ODM1-3-0-OC3-0-foundation.xsd">
         <jaxb:schemaBindings>
             <jaxb:package name="org.openclinica.ns.odm_ext_v130.v31_api" />
+        </jaxb:schemaBindings>
+    </jaxb:bindings>
+    <jaxb:bindings schemaLocation="../schemas/OpenClinica-ODM1-3-0-OC3-0-foundation-sb.xsd">
+        <jaxb:schemaBindings>
+            <jaxb:package name="org.openclinica.ns.odm_ext_v130.v31_sb" />
         </jaxb:schemaBindings>
     </jaxb:bindings>
     <jaxb:bindings schemaLocation="../schemas/rules-ODM.xsd" >
