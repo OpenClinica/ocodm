@@ -4,46 +4,18 @@
 	<groupId>org.akaza.openclinica.odm</groupId>
 	<artifactId>openclinica-odm</artifactId>
 	<packaging>jar</packaging>
-	<version>2.2</version>
+	<version>2.3</version>
 	<name>openclinica-odm</name>
 	<properties>
-		<slf4j.version>1.6.1</slf4j.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
-	<dependencies>
-		<!-- General dependencies for standard applications -->
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.8.1</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>log4j</groupId>
-			<artifactId>log4j</artifactId>
-			<version>1.2.16</version>
-		</dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-api</artifactId>
-			<version>${slf4j.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>jcl-over-slf4j</artifactId>
-			<version>${slf4j.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-log4j12</artifactId>
-			<version>${slf4j.version}</version>
-		</dependency>
-    </dependencies>
+	<dependencies/>
 	<build>
 		<plugins>
 			<plugin>
 			    <groupId>org.codehaus.mojo</groupId>
 			    <artifactId>jaxb2-maven-plugin</artifactId>
+				<version>2.3</version>
 			    <executions>
 
                     <execution>
@@ -57,6 +29,9 @@
                             <bindingDirectory>src/main/xjb</bindingDirectory>
                             <bindingFiles>binding-customization.xjb</bindingFiles>
                             <clearOutputDir>false</clearOutputDir>
+							<sources>
+								<source>src/main/schemas</source>
+							</sources>
                         </configuration>
                     </execution>
 			    </executions>
@@ -66,8 +41,34 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>2.1</version>
 				<configuration>
-					<source>1.6</source>
-					<target>1.6</target>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<!-- Needed to run the plugin xjc with java8 -->
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>properties-maven-plugin</artifactId>
+				<version>1.0.0</version>
+				<executions>
+					<execution>
+						<id>set-additional-system-properties</id>
+						<goals>
+							<goal>set-system-properties</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<properties>
+						<property>
+							<name>javax.xml.accessExternalSchema</name>
+							<value>all</value>
+						</property>
+						<property>
+							<name>javax.xml.accessExternalDTD</name>
+							<value>all</value>
+						</property>
+					</properties>
 				</configuration>
 			</plugin>
 		</plugins>
