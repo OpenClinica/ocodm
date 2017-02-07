@@ -184,6 +184,7 @@
 	<xs:complexType name="OCodmComplexTypeDefinition-FormLayoutDef">
 		<xs:sequence>
 		<xs:element name="URL" type="odm:text" minOccurs="0" maxOccurs="1"/>
+		<xs:group ref="FormLayoutDefElementExtension" minOccurs="0" maxOccurs="unbounded"/>		
 		</xs:sequence>
 		<xs:attributeGroup ref="FormLayoutDefAttributeDefinition"/>
 	</xs:complexType>
@@ -200,6 +201,7 @@
 	
 	<xs:complexType name="OCodmComplexTypeDefinition-FormDetails">
 		<xs:sequence>
+			<xs:element name="Description" type="odm:text" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="VersionDescription" type="odm:text" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="RevisionNotes" type="odm:text" minOccurs="0" maxOccurs="1"/>
 			<xs:element ref="PresentInEventDefinition" minOccurs="1" maxOccurs="unbounded"/>
@@ -220,6 +222,7 @@
 		<xs:attribute name="HideCRF" type="odm:text"/>
 		<xs:attribute name="ParticipantForm" type="odm:text"/>
 		<xs:attribute name="AllowAnonymousSubmission" type="odm:text"/>
+		<xs:attribute name="SubmissionUrl" type="odm:text"/>		
 		<xs:attribute name="Offline" type="odm:text"/>
 	</xs:attributeGroup>
 
@@ -373,6 +376,7 @@
 	<xs:group name="StudyParameterListItemElementExtension"> <xs:sequence/>  </xs:group>
 	<!-- <xs:group name="EventDefinitionDetailsRefElementExtension"> <xs:sequence/>  </xs:group> -->
 	<xs:group name="EventDefinitionDetailsElementExtension"> <xs:sequence/>  </xs:group>
+	<xs:group name="FormLayoutDefElementExtension"> <xs:sequence/>  </xs:group>
 	<xs:group name="FormDetailsElementExtension"> <xs:sequence/>  </xs:group>
 	<xs:group name="PresentInEventDefinitionElementExtension"> <xs:sequence/>  </xs:group>
 	<xs:group name="ItemGroupDetailsElementExtension"> <xs:sequence/>  </xs:group>
@@ -462,6 +466,7 @@
 	<xs:attribute name="InterviewerName" type="odm:text" />
 	<xs:attribute name="InterviewDate" type="odm:date" />
     <xs:attribute name="FormName" type="odm:text" />
+    <xs:attribute name="Description" type="odm:text" />
     <xs:attribute name="VersionDescription" type="odm:text" />
     <xs:attribute name="Url" type="odm:text" />
     <xs:attribute name="StatusChangeTimeStamp" type="dateOrDatetime" />

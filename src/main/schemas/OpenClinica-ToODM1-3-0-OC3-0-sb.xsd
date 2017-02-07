@@ -130,10 +130,12 @@
 			<xs:attribute ref="OpenClinica:InterviewDate" />
 			<xs:attribute ref="OpenClinica:Status" />
             <xs:attribute ref="OpenClinica:FormName" />
+            <xs:attribute ref="OpenClinica:Description" />
             <xs:attribute ref="OpenClinica:VersionDescription" />
             <xs:attribute ref="OpenClinica:Url" />
             <xs:attribute ref="OpenClinica:StatusChangeTimeStamp" />
 		</xs:attributeGroup>
+
 		<xs:attributeGroup name="ItemDataAttributeExtension">
 		  <xs:attributeGroup ref="ItemDataAttributeExtension" />
 		  <xs:attribute ref="OpenClinica:ReasonForNull" />
