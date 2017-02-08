@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema targetNamespace="http://www.openclinica.org/ns/odm_ext_v130/v3.1-api"
-           xmlns="http://www.openclinica.org/ns/odm_ext_v130/v3.1-api"
-           xmlns:odm="http://www.cdisc.org/ns/odm/v1.3-api"
+<xs:schema targetNamespace="http://www.openclinica.org/ns/odm_ext_v130/v3.1"
+           xmlns="http://www.openclinica.org/ns/odm_ext_v130/v3.1"
+           xmlns:odm="http://www.cdisc.org/ns/odm/v1.3"
            xmlns:xs="http://www.w3.org/2001/XMLSchema"
            elementFormDefault="qualified" attributeFormDefault="unqualified">
   <!--<xs:import schemaLocation="http://www.w3.org/2001/03/xml.xsd" namespace="http://www.w3.org/XML/1998/namespace" /> -->
   <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="xml.xsd"/>
-  <xs:import schemaLocation="ODM1-3-0-api.xsd" namespace="http://www.cdisc.org/ns/odm/v1.3-api" />
+  <xs:import schemaLocation="ODM1-3-0.xsd" namespace="http://www.cdisc.org/ns/odm/v1.3" />
     <xs:simpleType name="dateOrDatetime">
           <xs:restriction base="xs:string">
             <xs:pattern   value="[0-9][0-9][0-9][0-9]-[0-1][0-9]-[0-3][0-9](T[0-2][0-9]:[0-5][0-9]:[0-5][0-9](\.[0-9]+)?)?((\+|-)[0-2][0-9]:[0-5][0-9])?"/>
@@ -173,6 +173,22 @@
 		<xs:attributeGroup ref="StudyParameterListItemAttributeExtension"/>
 	</xs:complexType>
 	
+		<xs:complexType name="OCodmComplexTypeDefinition-ConfigurationParameters">
+		<xs:attributeGroup ref="ConfigurationParametersAttributeDefinition"/>
+	</xs:complexType>
+
+	<xs:complexType name="OCodmComplexTypeDefinition-FormLayoutRef">
+		<xs:attributeGroup ref="FormLayoutRefAttributeDefinition"/>
+	</xs:complexType>
+	
+	<xs:complexType name="OCodmComplexTypeDefinition-FormLayoutDef">
+		<xs:sequence>
+		<xs:element name="URL" type="odm:text" minOccurs="0" maxOccurs="1"/>
+		<xs:group ref="FormLayoutDefElementExtension" minOccurs="0" maxOccurs="unbounded"/>		
+		</xs:sequence>
+		<xs:attributeGroup ref="FormLayoutDefAttributeDefinition"/>
+	</xs:complexType>
+
 	<xs:complexType name="OCodmComplexTypeDefinition-EventDefinitionDetails">
 		<xs:sequence>
 			<xs:element name="Description" type="odm:text" minOccurs="0" maxOccurs="1"/>
@@ -185,6 +201,7 @@
 	
 	<xs:complexType name="OCodmComplexTypeDefinition-FormDetails">
 		<xs:sequence>
+			<xs:element name="Description" type="odm:text" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="VersionDescription" type="odm:text" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="RevisionNotes" type="odm:text" minOccurs="0" maxOccurs="1"/>
 			<xs:element ref="PresentInEventDefinition" minOccurs="1" maxOccurs="unbounded"/>
@@ -200,6 +217,24 @@
 		<xs:attributeGroup ref="PresentInEventDefinitionAttributeDefinition"/>
 		<xs:attributeGroup ref="PresentInEventDefinitionAttributeExtension"/>
 	</xs:complexType>
+	
+	<xs:attributeGroup name="ConfigurationParametersAttributeDefinition">
+		<xs:attribute name="HideCRF" type="odm:text"/>
+		<xs:attribute name="ParticipantForm" type="odm:text"/>
+		<xs:attribute name="AllowAnonymousSubmission" type="odm:text"/>
+		<xs:attribute name="SubmissionUrl" type="odm:text"/>		
+		<xs:attribute name="Offline" type="odm:text"/>
+	</xs:attributeGroup>
+
+	<xs:attributeGroup name="FormLayoutRefAttributeDefinition">
+		<xs:attribute name="OID" type="odm:oidref" use="required"/>
+		<xs:attribute name="IsDefaultVersion" type="odm:text"/>
+	</xs:attributeGroup>
+	
+	<xs:attributeGroup name="FormLayoutDefAttributeDefinition">
+		<xs:attribute name="OID" type="odm:oidref" use="required"/>
+	</xs:attributeGroup>
+	
 	
 	<xs:complexType name="OCodmComplexTypeDefinition-ItemGroupDetails">
 		<xs:sequence>
@@ -341,6 +376,7 @@
 	<xs:group name="StudyParameterListItemElementExtension"> <xs:sequence/>  </xs:group>
 	<!-- <xs:group name="EventDefinitionDetailsRefElementExtension"> <xs:sequence/>  </xs:group> -->
 	<xs:group name="EventDefinitionDetailsElementExtension"> <xs:sequence/>  </xs:group>
+	<xs:group name="FormLayoutDefElementExtension"> <xs:sequence/>  </xs:group>
 	<xs:group name="FormDetailsElementExtension"> <xs:sequence/>  </xs:group>
 	<xs:group name="PresentInEventDefinitionElementExtension"> <xs:sequence/>  </xs:group>
 	<xs:group name="ItemGroupDetailsElementExtension"> <xs:sequence/>  </xs:group>
@@ -370,6 +406,9 @@
 			<xs:field xpath="@Name"/>
 		</xs:unique>
 	</xs:element>
+	<xs:element name="ConfigurationParameters" type="OCodmComplexTypeDefinition-ConfigurationParameters"/>
+	<xs:element name="FormLayoutRef" type="OCodmComplexTypeDefinition-FormLayoutRef"/>	
+	<xs:element name="FormLayoutDef" type="OCodmComplexTypeDefinition-FormLayoutDef"/>	
 	<xs:element name="StudyGroupItem" type="OCodmComplexTypeDefinition-StudyGroupItem"/>  
 	<xs:element name="StudyDetails" type="OCodmComplexTypeDefinition-StudyDetails"/>
 	<xs:element name="StudyDescriptionAndStatus" type="OCodmComplexTypeDefinition-StudyDescriptionAndStatus"/>
@@ -427,6 +466,7 @@
 	<xs:attribute name="InterviewerName" type="odm:text" />
 	<xs:attribute name="InterviewDate" type="odm:date" />
     <xs:attribute name="FormName" type="odm:text" />
+    <xs:attribute name="Description" type="odm:text" />
     <xs:attribute name="VersionDescription" type="odm:text" />
     <xs:attribute name="Url" type="odm:text" />
     <xs:attribute name="StatusChangeTimeStamp" type="dateOrDatetime" />

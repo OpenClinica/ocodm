@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema targetNamespace="http://www.cdisc.org/ns/odm/v1.3-api" xmlns="http://www.cdisc.org/ns/odm/v1.3-api"
-           xmlns:OpenClinica="http://www.openclinica.org/ns/odm_ext_v130/v3.1-api"
+<xs:schema targetNamespace="http://www.cdisc.org/ns/odm/v1.3" xmlns="http://www.cdisc.org/ns/odm/v1.3"
+           xmlns:OpenClinica="http://www.openclinica.org/ns/odm_ext_v130/v3.1"
            xmlns:OpenClinicaRules="http://www.openclinica.org/ns/rules/v3.1"
            xmlns:xs="http://www.w3.org/2001/XMLSchema"
            elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:import schemaLocation="OpenClinica-ODM1-3-0-OC3-0-foundation.xsd"
-	           namespace="http://www.openclinica.org/ns/odm_ext_v130/v3.1-api" />
+	           namespace="http://www.openclinica.org/ns/odm_ext_v130/v3.1" />
 	<xs:import schemaLocation="rules-ODM.xsd" namespace="http://www.openclinica.org/ns/rules/v3.1" />
-	<xs:redefine schemaLocation="ODM1-3-0-api-foundation.xsd">
+	<xs:redefine schemaLocation="ODM1-3-0-foundation.xsd">
 	
 		
 		<xs:group name="MetaDataVersionElementExtension">
@@ -26,9 +26,18 @@
 				<xs:element ref="OpenClinica:EventDefinitionDetails" minOccurs="0" maxOccurs="1" />
 			</xs:sequence>
 		</xs:group>
+		<xs:group name="FormRefElementExtension">
+			<xs:sequence>
+				<xs:group ref="FormRefElementExtension" />
+				<xs:element ref="OpenClinica:ConfigurationParameters" minOccurs="0" maxOccurs="1" />
+				<xs:element ref="OpenClinica:FormLayoutRef" minOccurs="0" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:group>
+		
 		<xs:group name="FormDefElementExtension">
 			<xs:sequence>
 				<xs:group ref="FormDefElementExtension" />
+				<xs:element ref="OpenClinica:FormLayoutDef" minOccurs="0" maxOccurs="unbounded" />
 				<xs:element ref="OpenClinica:FormDetails" minOccurs="0" maxOccurs="1" />
 			</xs:sequence>
 		</xs:group>
@@ -121,10 +130,12 @@
 			<xs:attribute ref="OpenClinica:InterviewDate" />
 			<xs:attribute ref="OpenClinica:Status" />
             <xs:attribute ref="OpenClinica:FormName" />
+            <xs:attribute ref="OpenClinica:Description" />
             <xs:attribute ref="OpenClinica:VersionDescription" />
             <xs:attribute ref="OpenClinica:Url" />
             <xs:attribute ref="OpenClinica:StatusChangeTimeStamp" />
 		</xs:attributeGroup>
+
 		<xs:attributeGroup name="ItemDataAttributeExtension">
 		  <xs:attributeGroup ref="ItemDataAttributeExtension" />
 		  <xs:attribute ref="OpenClinica:ReasonForNull" />
