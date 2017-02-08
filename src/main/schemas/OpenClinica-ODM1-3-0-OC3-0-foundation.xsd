@@ -443,7 +443,7 @@
 <!-- FormDefAttributeExtension -->
 	<xs:attribute name="StudyEventOIDs" type="odm:text" />
 <!-- ItemDefAttributeExtension -->
-	<xs:attribute name="FormOIDs" type="odm:text" />
+	<xs:attribute name="FormOID" type="odm:text" />
 <!-- QuestionAttributeExtension -->
 	<xs:attribute name="QuestionNumber" type="odm:text" />
     

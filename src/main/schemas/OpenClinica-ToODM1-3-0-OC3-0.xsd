@@ -97,7 +97,7 @@
 		</xs:attributeGroup>
 		<xs:attributeGroup name="ItemDefAttributeExtension">
 			<xs:attributeGroup ref="ItemDefAttributeExtension" />
-			<xs:attribute ref="OpenClinica:FormOIDs"  />
+			<xs:attribute ref="OpenClinica:FormOID"  />
 		</xs:attributeGroup> 
 		<xs:attributeGroup name="QuestionAttributeExtension">
 			<xs:attributeGroup ref="QuestionAttributeExtension" />
