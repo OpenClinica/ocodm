@@ -125,7 +125,7 @@
 		</xs:attributeGroup>
 		<xs:attributeGroup name="FormDataAttributeExtension">
 			<xs:attributeGroup ref="FormDataAttributeExtension" />
-			<xs:attribute ref="OpenClinica:Version" />
+			<xs:attribute ref="OpenClinica:FormLayoutOID" />
 			<xs:attribute ref="OpenClinica:InterviewerName" />
 			<xs:attribute ref="OpenClinica:InterviewDate" />
 			<xs:attribute ref="OpenClinica:Status" />

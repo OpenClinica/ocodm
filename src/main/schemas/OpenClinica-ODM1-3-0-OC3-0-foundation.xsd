@@ -462,7 +462,7 @@
 	<xs:attribute name="EndDate" type="dateOrDatetime" />
 	<xs:attribute name="SubjectAgeAtEvent" type="odm:integer" />
 <!-- FormDataAttributeExtension -->
-	<xs:attribute name="Version" type="odm:text" />
+	<xs:attribute name="FormLayoutOID" type="odm:text" />
 	<xs:attribute name="InterviewerName" type="odm:text" />
 	<xs:attribute name="InterviewDate" type="odm:date" />
     <xs:attribute name="FormName" type="odm:text" />
