@@ -12,7 +12,7 @@
             <xs:pattern   value="[0-9][0-9][0-9][0-9]-[0-1][0-9]-[0-3][0-9](T[0-2][0-9]:[0-5][0-9]:[0-5][0-9](\.[0-9]+)?)?((\+|-)[0-2][0-9]:[0-5][0-9])?"/>
           </xs:restriction>
     </xs:simpleType>
-    
+
     <xs:complexType name="OCodmComplexTypeDefinition-MultiSelectListRef">
 		<xs:sequence>
 			<xs:group ref="MultiSelectListRefElementExtension" minOccurs="0" maxOccurs="unbounded"/>
@@ -36,7 +36,7 @@
 		<xs:attributeGroup ref="MultiSelectListItemAttributeDefinition"/>
 		<xs:attributeGroup ref="MultiSelectListItemAttributeExtension"/>
 	</xs:complexType>
-	
+
 	<xs:complexType name="OCodmComplexTypeDefinition-StudyGroupClassList">
 		<xs:sequence>
 			<xs:choice>
@@ -54,7 +54,7 @@
 		<xs:attributeGroup ref="StudyGroupItemAttributeDefinition"/>
 		<xs:attributeGroup ref="StudyGroupItemAttributeExtension"/>
 	</xs:complexType>
-	
+
 	<xs:complexType name="OCodmComplexTypeDefinition-StudyDetails">
 		<xs:sequence>
 			<xs:element ref="StudyDescriptionAndStatus" minOccurs="1" maxOccurs="1"/>
@@ -172,7 +172,7 @@
 		<xs:attributeGroup ref="StudyParameterListItemAttributeDefinition"/>
 		<xs:attributeGroup ref="StudyParameterListItemAttributeExtension"/>
 	</xs:complexType>
-	
+
 		<xs:complexType name="OCodmComplexTypeDefinition-ConfigurationParameters">
 		<xs:attributeGroup ref="ConfigurationParametersAttributeDefinition"/>
 	</xs:complexType>
@@ -180,11 +180,11 @@
 	<xs:complexType name="OCodmComplexTypeDefinition-FormLayoutRef">
 		<xs:attributeGroup ref="FormLayoutRefAttributeDefinition"/>
 	</xs:complexType>
-	
+
 	<xs:complexType name="OCodmComplexTypeDefinition-FormLayoutDef">
 		<xs:sequence>
 		<xs:element name="URL" type="odm:text" minOccurs="0" maxOccurs="1"/>
-		<xs:group ref="FormLayoutDefElementExtension" minOccurs="0" maxOccurs="unbounded"/>		
+		<xs:group ref="FormLayoutDefElementExtension" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 		<xs:attributeGroup ref="FormLayoutDefAttributeDefinition"/>
 	</xs:complexType>
@@ -198,7 +198,7 @@
 		<xs:attributeGroup ref="EventDefinitionDetailsAttributeDefinition"/>
 		<xs:attributeGroup ref="EventDefinitionDetailsAttributeExtension"/>
 	</xs:complexType>
-	
+
 	<xs:complexType name="OCodmComplexTypeDefinition-FormDetails">
 		<xs:sequence>
 			<xs:element name="Description" type="odm:text" minOccurs="0" maxOccurs="1"/>
@@ -217,25 +217,26 @@
 		<xs:attributeGroup ref="PresentInEventDefinitionAttributeDefinition"/>
 		<xs:attributeGroup ref="PresentInEventDefinitionAttributeExtension"/>
 	</xs:complexType>
-	
+
 	<xs:attributeGroup name="ConfigurationParametersAttributeDefinition">
 		<xs:attribute name="HideCRF" type="odm:text"/>
 		<xs:attribute name="ParticipantForm" type="odm:text"/>
 		<xs:attribute name="AllowAnonymousSubmission" type="odm:text"/>
-		<xs:attribute name="SubmissionUrl" type="odm:text"/>		
+		<xs:attribute name="SubmissionUrl" type="odm:text"/>
 		<xs:attribute name="Offline" type="odm:text"/>
+		<xs:attribute name="SourceDataVerificationCode" type="odm:text"/>
 	</xs:attributeGroup>
 
 	<xs:attributeGroup name="FormLayoutRefAttributeDefinition">
 		<xs:attribute name="OID" type="odm:oidref" use="required"/>
 		<xs:attribute name="IsDefaultVersion" type="odm:text"/>
 	</xs:attributeGroup>
-	
+
 	<xs:attributeGroup name="FormLayoutDefAttributeDefinition">
 		<xs:attribute name="OID" type="odm:oidref" use="required"/>
 	</xs:attributeGroup>
-	
-	
+
+
 	<xs:complexType name="OCodmComplexTypeDefinition-ItemGroupDetails">
 		<xs:sequence>
 			<xs:element ref="PresentInForm" minOccurs="1" maxOccurs="unbounded"/>
@@ -260,7 +261,7 @@
 		<xs:attributeGroup ref="ItemGroupRepeatAttributeDefinition"/>
 		<xs:attributeGroup ref="ItemGroupRepeatAttributeExtension"/>
 	</xs:complexType>
-	
+
 	<xs:complexType name="OCodmComplexTypeDefinition-ItemDetails">
 		<xs:sequence>
 			<xs:element ref="ItemPresentInForm" minOccurs="1" maxOccurs="unbounded"/>
@@ -289,7 +290,7 @@
 		</xs:sequence>
 		<xs:attributeGroup ref="ItemResponseAttributeDefinition"/>
 		<xs:attributeGroup ref="ItemResponseAttributeExtension"/>
-	</xs:complexType>	
+	</xs:complexType>
 	<xs:complexType name="OCodmComplexTypeDefinition-SimpleConditionalDisplay">
 		<xs:sequence>
 			<xs:element name="ControlItemName" type="odm:text" minOccurs="1" maxOccurs="1"/>
@@ -300,7 +301,7 @@
 		<xs:attributeGroup ref="SimpleConditionalDisplayAttributeDefinition"/>
 		<xs:attributeGroup ref="SimpleConditionalDisplayAttributeExtension"/>
 	</xs:complexType>
-	
+
 	<xs:complexType name="OCodmComplexTypeDefinition-SubjectGroupData">
 		<xs:sequence>
 			<xs:group ref="SubjectGroupDataElementExtension" minOccurs="0" maxOccurs="unbounded"/>
@@ -316,7 +317,7 @@
 		<xs:attributeGroup ref="AuditLogsAttributeDefinition"/>
 		<xs:attributeGroup ref="AuditLogsAttributeExtension"/>
 	</xs:complexType>
-	
+
 	<xs:complexType name="OCodmComplexTypeDefinition-AuditLog">
 		<xs:sequence>
 			<xs:group ref="AuditLogElementExtension" minOccurs="0" maxOccurs="unbounded"/>
@@ -324,7 +325,7 @@
 		<xs:attributeGroup ref="AuditLogAttributeDefinition"/>
 		<xs:attributeGroup ref="AuditLogAttributeExtension"/>
 	</xs:complexType>
-	
+
 	<xs:complexType name="OCodmComplexTypeDefinition-DiscrepancyNotes">
 		<xs:sequence>
 			<xs:element ref="DiscrepancyNote" minOccurs="0" maxOccurs="unbounded"/>
@@ -333,7 +334,7 @@
 		<xs:attributeGroup ref="DiscrepancyNotesAttributeDefinition"/>
 		<xs:attributeGroup ref="DiscrepancyNotesAttributeExtension"/>
 	</xs:complexType>
-	
+
 	<xs:complexType name="OCodmComplexTypeDefinition-DiscrepancyNote">
 		<xs:sequence>
 			<xs:element ref="ChildNote" minOccurs="0" maxOccurs="unbounded"/>
@@ -342,7 +343,7 @@
 		<xs:attributeGroup ref="DiscrepancyNoteAttributeDefinition"/>
 		<xs:attributeGroup ref="DiscrepancyNoteAttributeExtension"/>
 	</xs:complexType>
-	
+
 	<xs:complexType name="OCodmComplexTypeDefinition-ChildNote">
 		<xs:sequence>
 			<xs:element name="Description" type="odm:text" minOccurs="0" maxOccurs="unbounded"/>
@@ -353,13 +354,13 @@
 		<xs:attributeGroup ref="ChildNoteAttributeDefinition"/>
 		<xs:attributeGroup ref="ChildNoteAttributeExtension"/>
 	</xs:complexType>
-	
-	
 
-	
-	
-	
-    
+
+
+
+
+
+
     <xs:group name="MultiSelectListRefElementExtension"> <xs:sequence/>  </xs:group>
 	<xs:group name="MultiSelectListElementExtension"> <xs:sequence/>  </xs:group>
 	<xs:group name="MultiSelectListItemElementExtension"> <xs:sequence/>  </xs:group>
@@ -393,13 +394,13 @@
 	<xs:group name="DiscrepancyNotesElementExtension"> <xs:sequence/>  </xs:group>
 	<xs:group name="DiscrepancyNoteElementExtension"> <xs:sequence/>  </xs:group>
 	<xs:group name="ChildNoteElementExtension"> <xs:sequence/>  </xs:group>
-	
-	
-	
-	
+
+
+
+
 	<xs:element name="MultiSelectListRef" type="OCodmComplexTypeDefinition-MultiSelectListRef"/>
 	<xs:element name="MultiSelectList" type="OCodmComplexTypeDefinition-MultiSelectList"/>
-	<xs:element name="MultiSelectListItem" type="OCodmComplexTypeDefinition-MultiSelectListItem"/> 	
+	<xs:element name="MultiSelectListItem" type="OCodmComplexTypeDefinition-MultiSelectListItem"/>
 	<xs:element name="StudyGroupClassList" type="OCodmComplexTypeDefinition-StudyGroupClassList">
 		<xs:unique name="UC-SGC-1">
 			<xs:selector xpath="StudyGroupItem"/>
@@ -407,9 +408,9 @@
 		</xs:unique>
 	</xs:element>
 	<xs:element name="ConfigurationParameters" type="OCodmComplexTypeDefinition-ConfigurationParameters"/>
-	<xs:element name="FormLayoutRef" type="OCodmComplexTypeDefinition-FormLayoutRef"/>	
-	<xs:element name="FormLayoutDef" type="OCodmComplexTypeDefinition-FormLayoutDef"/>	
-	<xs:element name="StudyGroupItem" type="OCodmComplexTypeDefinition-StudyGroupItem"/>  
+	<xs:element name="FormLayoutRef" type="OCodmComplexTypeDefinition-FormLayoutRef"/>
+	<xs:element name="FormLayoutDef" type="OCodmComplexTypeDefinition-FormLayoutDef"/>
+	<xs:element name="StudyGroupItem" type="OCodmComplexTypeDefinition-StudyGroupItem"/>
 	<xs:element name="StudyDetails" type="OCodmComplexTypeDefinition-StudyDetails"/>
 	<xs:element name="StudyDescriptionAndStatus" type="OCodmComplexTypeDefinition-StudyDescriptionAndStatus"/>
 	<xs:element name="ConditionsAndEligibility" type="OCodmComplexTypeDefinition-ConditionsAndEligibility"/>
@@ -419,7 +420,7 @@
 	<xs:element name="StudyParameterConfiguration" type="OCodmComplexTypeDefinition-StudyParameterConfiguration"/>
 	<xs:element name="StudyParameterListRef" type="OCodmComplexTypeDefinition-StudyParameterListRef"/>
 	<xs:element name="StudyParameterList" type="OCodmComplexTypeDefinition-StudyParameterList"/>
-	<xs:element name="StudyParameterListItem" type="OCodmComplexTypeDefinition-StudyParameterListItem"/> 
+	<xs:element name="StudyParameterListItem" type="OCodmComplexTypeDefinition-StudyParameterListItem"/>
 	<!-- <xs:element name="EventDefinitionDetailsRef" type="OCodmComplexTypeDefinition-EventDefinitionDetailsRef"/> -->
 	<xs:element name="EventDefinitionDetails" type="OCodmComplexTypeDefinition-EventDefinitionDetails"/>
 	<xs:element name="FormDetails" type="OCodmComplexTypeDefinition-FormDetails"/>
@@ -437,7 +438,7 @@
 	<xs:element name="DiscrepancyNotes" type="OCodmComplexTypeDefinition-DiscrepancyNotes"/>
 	<xs:element name="DiscrepancyNote" type="OCodmComplexTypeDefinition-DiscrepancyNote"/>
 	<xs:element name="ChildNote" type="OCodmComplexTypeDefinition-ChildNote"/>
-    
+
 <!-- ClinicalDataAttributeExtension -->
     <xs:attribute name="StudyName" type="odm:text" />
 <!-- FormDefAttributeExtension -->
@@ -446,7 +447,7 @@
 	<xs:attribute name="FormOIDs" type="odm:text" />
 <!-- QuestionAttributeExtension -->
 	<xs:attribute name="QuestionNumber" type="odm:text" />
-    
+
 <!--  SubjectDataAttributeExtension  -->
 	<xs:attribute name="StudySubjectID" type="odm:text" />
 	<xs:attribute name="UniqueIdentifier" type="odm:text" />
@@ -472,25 +473,25 @@
     <xs:attribute name="StatusChangeTimeStamp" type="dateOrDatetime" />
 <!-- ItemDataAttributeExtension -->
 	<xs:attribute name="ReasonForNull" type="odm:text" />
-	
-	
-	
-	
+
+
+
+
 	<xs:attributeGroup name="MultiSelectListRefAttributeDefinition">
 		<xs:attribute name="MultiSelectListID" type="odm:oidref" use="required"/>
 	</xs:attributeGroup>
-	
+
 	<xs:attributeGroup name="MultiSelectListAttributeDefinition">
 		<xs:attribute name="ID" type="odm:oid" use="required"/>
 		<xs:attribute name="Name" type="odm:text"/>
 		<xs:attribute name="DataType" type="odm:DataType"/>
 		<xs:attribute name="ActualDataType" type="odm:DataType"/>
 	</xs:attributeGroup>
-	
+
 	<xs:attributeGroup name="MultiSelectListItemAttributeDefinition">
         <xs:attribute  name="CodedOptionValue" type="odm:value" use="required"/>
     </xs:attributeGroup>
-    
+
     <xs:attributeGroup name="StudyGroupClassListAttributeDefinition">
 		<xs:attribute name="ID" type="odm:oid" use="required"/>
 		<xs:attribute name="Name" type="odm:text"/>
@@ -503,11 +504,11 @@
 		<xs:attribute name="Name" type="odm:text"/>
 		<xs:attribute name="Description" type="odm:text"/>
 	</xs:attributeGroup>
-	
+
 	<xs:attributeGroup name="StudyDetailsAttributeDefinition">
 		<xs:attribute name="StudyOID" type="odm:oidref" use="required"/>
 	</xs:attributeGroup>
-	
+
 	<xs:attributeGroup name="StudyDescriptionAndStatusAttributeDefinition">
 		<xs:attribute name="OfficialTitle" type="odm:text"/>
 		<xs:attribute name="SecondaryIDs" type="odm:text"/>
@@ -515,35 +516,35 @@
 		<xs:attribute name="StartDate" type="odm:date" use="required"/>
 		<xs:attribute name="StudyCompletionDate" type="odm:date"/>
 	</xs:attributeGroup>
-	
+
 	<xs:attributeGroup name="ConditionsAndEligibilityAttributeDefinition"/>
 	<xs:attributeGroup name="FacilityInformationAttributeDefinition"/>
 	<xs:attributeGroup name="RelatedInformationAttributeDefinition"/>
 	<xs:attributeGroup name="StudyParameterConfigurationAttributeDefinition"/>
-	
+
 	<xs:attributeGroup name="StudyParameterListRefAttributeDefinition">
 		<xs:attribute name="StudyParameterListID" type="odm:oidref" use="required"/>
 		<xs:attribute name="Value" type="odm:text" use="required"/>
 	</xs:attributeGroup>
-	
+
 	<xs:attributeGroup name="StudyParameterListAttributeDefinition">
 		<xs:attribute name="ID" type="odm:oid" use="required"/>
 		<xs:attribute name="Name" type="odm:text"/>
 	</xs:attributeGroup>
-	
+
 	<xs:attributeGroup name="StudyParameterListItemAttributeDefinition">
         <xs:attribute  name="CodedParameterValue" type="odm:value" use="required"/>
-    </xs:attributeGroup> 
-	
+    </xs:attributeGroup>
+
 	<xs:attributeGroup name="AgeAttributeDefinition">
 		<xs:attribute name="MinimumAge" type="odm:text"/>
 		<xs:attribute name="MaximumAge" type="odm:text"/>
 	</xs:attributeGroup>
-	
+
 	<xs:attributeGroup name="EventDefinitionDetailsAttributeDefinition">
 		<xs:attribute name="StudyEventOID" type="odm:oidref" use="required"/>
 	</xs:attributeGroup>
-	
+
 	<xs:attributeGroup name="FormDetailsAttributeDefinition">
 		<xs:attribute name="FormOID" type="odm:oidref" use="required"/>
 		<xs:attribute name="ParentFormOID" type="odm:oidref"/>
@@ -557,25 +558,25 @@
 		<xs:attribute name="HideCRF" type="odm:text"/>
 		<xs:attribute name="SourceDataVerification" type="odm:text"/>
 	</xs:attributeGroup>
-	
+
 	<xs:attributeGroup name="ItemGroupDetailsAttributeDefinition">
 		<xs:attribute name="ItemGroupOID" type="odm:oidref" use="required"/>
 	</xs:attributeGroup>
-	
+
 	<xs:attributeGroup name="PresentInFormAttributeDefinition">
 		<xs:attribute name="FormOID" type="odm:oidref" use="required"/>
 		<xs:attribute name="ShowGroup" type="odm:text" />
 	</xs:attributeGroup>
-	
+
 	<xs:attributeGroup name="ItemGroupRepeatAttributeDefinition">
 		<xs:attribute name="RepeatNumber" type="odm:integer"/>
 		<xs:attribute name="RepeatMax" type="odm:integer"/>
 	</xs:attributeGroup>
-	
+
 	<xs:attributeGroup name="ItemDetailsAttributeDefinition">
 		<xs:attribute name="ItemOID" type="odm:oidref" use="required"/>
 	</xs:attributeGroup>
-	
+
 	<xs:attributeGroup name="ItemPresentInFormAttributeDefinition">
 		<xs:attribute name="FormOID" type="odm:oidref" use="required"/>
 		<xs:attribute name="ParentItemOID" type="odm:oidref"/>
@@ -585,19 +586,19 @@
 		<xs:attribute name="PHI" type="odm:text" use="required"/>
 		<xs:attribute name="ShowItem" type="odm:text" />
 	</xs:attributeGroup>
-	
+
 	<xs:attributeGroup name="SimpleConditionalDisplayAttributeDefinition"/>
 	<xs:attributeGroup name="ItemResponseAttributeDefinition">
 		<xs:attribute name="ResponseType" type="odm:text" use="required"/>
 		<xs:attribute name="ResponseLayout" type="odm:text"/>
 	</xs:attributeGroup>
-	
+
 	<xs:attributeGroup name="SubjectGroupDataAttributeDefinition">
 		<xs:attribute name="StudyGroupClassID" type="odm:oid" use="required"/>
 		<xs:attribute name="StudyGroupClassName" type="odm:text"/>
 		<xs:attribute name="StudyGroupName" type="odm:value"/>
 	</xs:attributeGroup>
-	
+
 	<xs:attributeGroup name="AuditLogsAttributeDefinition">
 		<xs:attribute name="EntityID" type="odm:oidref" use="required"/>
 	</xs:attributeGroup>
@@ -610,7 +611,7 @@
 		<xs:attribute name="OldValue" type="odm:text"/>
 		<xs:attribute name="NewValue" type="odm:text"/>
 	</xs:attributeGroup>
-	
+
 	<xs:attributeGroup name="DiscrepancyNotesAttributeDefinition">
 		<xs:attribute name="EntityID" type="odm:oidref" use="required"/>
 	</xs:attributeGroup>
@@ -621,16 +622,16 @@
 		<xs:attribute name="DateUpdated" type="odm:date"/>
 		<xs:attribute name="NumberOfChildNotes" type="odm:integer"/>
 	</xs:attributeGroup>
-	
+
 	<xs:attributeGroup name="ChildNoteAttributeDefinition">
 		<xs:attribute name="ID" type="odm:oid"/>
 		<xs:attribute name="Status" type="odm:text"/>
 		<xs:attribute name="DateCreated" type="odm:date"/>
 	</xs:attributeGroup>
-	
 
-	
-	
+
+
+
 	<xs:attributeGroup name="MultiSelectListRefAttributeExtension"/>
 	<xs:attributeGroup name="MultiSelectListAttributeExtension"/>
 	<xs:attributeGroup name="MultiSelectListItemAttributeExtension"/>
