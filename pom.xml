@@ -4,7 +4,7 @@
 	<groupId>org.akaza.openclinica.odm</groupId>
 	<artifactId>openclinica-odm</artifactId>
 	<packaging>jar</packaging>
-	<version>2.3</version>
+	<version>2.4</version>
 	<name>openclinica-odm</name>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

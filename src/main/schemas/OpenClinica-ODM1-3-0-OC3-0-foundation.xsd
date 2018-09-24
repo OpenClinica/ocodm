@@ -181,6 +181,10 @@
 		<xs:attributeGroup ref="FormLayoutRefAttributeDefinition"/>
 	</xs:complexType>
 
+	<xs:complexType name="OCodmComplexTypeDefinition-PermissionTags">
+		<xs:attributeGroup ref="PermissionTagsAttributeDefinition"/>
+	</xs:complexType>
+
 	<xs:complexType name="OCodmComplexTypeDefinition-FormLayoutDef">
 		<xs:sequence>
 		<xs:element name="URL" type="odm:text" minOccurs="0" maxOccurs="1"/>
@@ -230,6 +234,10 @@
 	<xs:attributeGroup name="FormLayoutRefAttributeDefinition">
 		<xs:attribute name="OID" type="odm:oidref" use="required"/>
 		<xs:attribute name="IsDefaultVersion" type="odm:text"/>
+	</xs:attributeGroup>
+
+	<xs:attributeGroup name="PermissionTagsAttributeDefinition">
+		<xs:attribute name="ids" type="odm:text" use="required"/>
 	</xs:attributeGroup>
 
 	<xs:attributeGroup name="FormLayoutDefAttributeDefinition">
@@ -409,6 +417,7 @@
 	</xs:element>
 	<xs:element name="ConfigurationParameters" type="OCodmComplexTypeDefinition-ConfigurationParameters"/>
 	<xs:element name="FormLayoutRef" type="OCodmComplexTypeDefinition-FormLayoutRef"/>
+	<xs:element name="PermissionTags" type="OCodmComplexTypeDefinition-PermissionTags"/>
 	<xs:element name="FormLayoutDef" type="OCodmComplexTypeDefinition-FormLayoutDef"/>
 	<xs:element name="StudyGroupItem" type="OCodmComplexTypeDefinition-StudyGroupItem"/>
 	<xs:element name="StudyDetails" type="OCodmComplexTypeDefinition-StudyDetails"/>
