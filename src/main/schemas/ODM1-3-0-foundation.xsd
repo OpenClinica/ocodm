@@ -994,8 +994,8 @@
         <xs:attributeGroup name="SubjectDataAttributeExtension">          </xs:attributeGroup>      
         <xs:attributeGroup name="StudyEventDataAttributeExtension">       </xs:attributeGroup>   
         <xs:attributeGroup name="FormDataAttributeExtension">             </xs:attributeGroup>         
-        <xs:attributeGroup name="ItemGroupDataAttributeExtension">        </xs:attributeGroup>    
-        <xs:attributeGroup name="ItemDataAttributeExtension">             </xs:attributeGroup>         
+        <xs:attributeGroup name="ItemGroupDataAttributeExtension">        </xs:attributeGroup>
+        <xs:attributeGroup name="ItemDataAttributeExtension">             </xs:attributeGroup>
         <xs:attributeGroup name="AnnotationAttributeExtension">           </xs:attributeGroup>       
         <xs:attributeGroup name="FlagAttributeExtension">                 </xs:attributeGroup>             
         <xs:attributeGroup name="SignatureAttributeExtension">            </xs:attributeGroup>        
@@ -1081,8 +1081,8 @@
         <xs:group name="SubjectDataElementExtension">        <xs:sequence/> </xs:group>      
         <xs:group name="StudyEventDataElementExtension">     <xs:sequence/> </xs:group>   
         <xs:group name="FormDataElementExtension">           <xs:sequence/> </xs:group>         
-        <xs:group name="ItemGroupDataElementExtension">      <xs:sequence/> </xs:group>    
-        <xs:group name="ItemDataElementExtension">           <xs:sequence/> </xs:group>         
+        <xs:group name="ItemGroupDataElementExtension">      <xs:sequence/> </xs:group>
+        <xs:group name="ItemDataElementExtension">           <xs:sequence/> </xs:group>
         <xs:group name="AnnotationElementExtension">         <xs:sequence/> </xs:group>       
         <xs:group name="FlagElementExtension">               <xs:sequence/> </xs:group>             
         <xs:group name="SignatureElementExtension">          <xs:sequence/> </xs:group>        
