@@ -6,7 +6,7 @@
 //
 
 
-package org.cdisc.ns.odm.v121;
+package org.openclinica.ns.odm_ext_v130.v31;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -15,19 +15,15 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for ODMcomplexTypeDefinition-ExternalCodeList complex type.
+ * <p>Java class for OCodmComplexTypeDefinition-Link complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="ODMcomplexTypeDefinition-ExternalCodeList"&gt;
+ * &lt;complexType name="OCodmComplexTypeDefinition-Link"&gt;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;group ref="{http://www.cdisc.org/ns/odm/v1.2}ExternalCodeListElementExtension" maxOccurs="unbounded" minOccurs="0"/&gt;
- *       &lt;/sequence&gt;
- *       &lt;attGroup ref="{http://www.cdisc.org/ns/odm/v1.2}ExternalCodeListAttributeDefinition"/&gt;
- *       &lt;attGroup ref="{http://www.cdisc.org/ns/odm/v1.2}ExternalCodeListAttributeExtension"/&gt;
+ *       &lt;attGroup ref="{http://www.openclinica.org/ns/odm_ext_v130/v3.1}LinkAttributeDefinition"/&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
@@ -36,60 +32,60 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ODMcomplexTypeDefinition-ExternalCodeList")
-public class ODMcomplexTypeDefinitionExternalCodeList {
+@XmlType(name = "OCodmComplexTypeDefinition-Link")
+public class OCodmComplexTypeDefinitionLink {
 
-    @XmlAttribute(name = "Dictionary")
-    protected String dictionary;
-    @XmlAttribute(name = "Version")
-    protected String version;
+    @XmlAttribute(name = "rel")
+    protected String rel;
+    @XmlAttribute(name = "href")
+    protected String href;
 
     /**
-     * Gets the value of the dictionary property.
+     * Gets the value of the rel property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getDictionary() {
-        return dictionary;
+    public String getRel() {
+        return rel;
     }
 
     /**
-     * Sets the value of the dictionary property.
+     * Sets the value of the rel property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setDictionary(String value) {
-        this.dictionary = value;
+    public void setRel(String value) {
+        this.rel = value;
     }
 
     /**
-     * Gets the value of the version property.
+     * Gets the value of the href property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getVersion() {
-        return version;
+    public String getHref() {
+        return href;
     }
 
     /**
-     * Sets the value of the version property.
+     * Sets the value of the href property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setVersion(String value) {
-        this.version = value;
+    public void setHref(String value) {
+        this.href = value;
     }
 
 }

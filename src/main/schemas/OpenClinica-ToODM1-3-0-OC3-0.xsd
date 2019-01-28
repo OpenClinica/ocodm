@@ -74,6 +74,7 @@
 		<xs:group name="FormDataElementExtension">
 			<xs:sequence>
 				<xs:group ref="FormDataElementExtension" />
+				<xs:element ref="OpenClinica:Links" minOccurs="0" maxOccurs="unbounded"/>
 				<xs:element ref="OpenClinica:AuditLogs" minOccurs="0" maxOccurs="unbounded"/>
 				<xs:element ref="OpenClinica:DiscrepancyNotes" minOccurs="0" maxOccurs="unbounded"/>
 			</xs:sequence>
