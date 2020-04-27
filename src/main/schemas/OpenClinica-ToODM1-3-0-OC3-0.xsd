@@ -123,6 +123,11 @@
 			<xs:attribute ref="OpenClinica:StartDate" />
 			<xs:attribute ref="OpenClinica:EndDate" />
 			<xs:attribute ref="OpenClinica:Status" />
+			<xs:attribute ref="OpenClinica:WorkflowStatus" />
+			<xs:attribute ref="OpenClinica:Signed" />
+			<xs:attribute ref="OpenClinica:Locked" />
+			<xs:attribute ref="OpenClinica:Removed" />
+			<xs:attribute ref="OpenClinica:Archived" />
 			<xs:attribute ref="OpenClinica:SubjectAgeAtEvent" />
 		</xs:attributeGroup>
 		<xs:attributeGroup name="FormDataAttributeExtension">
@@ -131,6 +136,9 @@
 			<xs:attribute ref="OpenClinica:InterviewerName" />
 			<xs:attribute ref="OpenClinica:InterviewDate" />
 			<xs:attribute ref="OpenClinica:Status" />
+			<xs:attribute ref="OpenClinica:WorkflowStatus" />
+			<xs:attribute ref="OpenClinica:Removed" />
+			<xs:attribute ref="OpenClinica:Archived" />
             <xs:attribute ref="OpenClinica:FormName" />
             <xs:attribute ref="OpenClinica:Description" />
             <xs:attribute ref="OpenClinica:VersionDescription" />
