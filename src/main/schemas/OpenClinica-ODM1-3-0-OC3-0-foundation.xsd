@@ -484,6 +484,11 @@
 	<xs:attribute name="StartDate" type="dateOrDatetime" />
 	<xs:attribute name="EndDate" type="dateOrDatetime" />
 	<xs:attribute name="SubjectAgeAtEvent" type="odm:integer" />
+	<xs:attribute name="WorkflowStatus" type="odm:text" />
+	<xs:attribute name="Signed" type="odm:text" />
+	<xs:attribute name="Locked" type="odm:text" />
+	<xs:attribute name="Removed" type="odm:text" />
+	<xs:attribute name="Archived" type="odm:text" />
 <!-- FormDataAttributeExtension -->
 	<xs:attribute name="FormLayoutOID" type="odm:text" />
 	<xs:attribute name="InterviewerName" type="odm:text" />
