@@ -136,6 +136,11 @@
 			<xs:attribute ref="OpenClinica:InterviewerName" />
 			<xs:attribute ref="OpenClinica:InterviewDate" />
 			<xs:attribute ref="OpenClinica:Status" />
+			<xs:attribute ref="OpenClinica:CreatedDate" />
+			<xs:attribute ref="OpenClinica:CreatedBy" />
+			<xs:attribute ref="OpenClinica:UpdatedDate" />
+			<xs:attribute ref="OpenClinica:UpdatedBy" />
+			<xs:attribute ref="OpenClinica:SdvStatus" />
 			<xs:attribute ref="OpenClinica:WorkflowStatus" />
 			<xs:attribute ref="OpenClinica:Removed" />
 			<xs:attribute ref="OpenClinica:Archived" />
