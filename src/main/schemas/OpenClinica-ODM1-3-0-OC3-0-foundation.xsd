@@ -229,6 +229,7 @@
 		<xs:attribute name="SubmissionUrl" type="odm:text"/>
 		<xs:attribute name="Offline" type="odm:text"/>
 		<xs:attribute name="SourceDataVerificationCode" type="odm:text"/>
+		<xs:attribute name="allowAdd" type="odm:text"/>
 	</xs:attributeGroup>
 
 	<xs:attributeGroup name="FormLayoutRefAttributeDefinition">
@@ -589,6 +590,7 @@
 		<xs:attribute name="DoubleDataEntry" type="odm:text"/>
 		<xs:attribute name="HideCRF" type="odm:text"/>
 		<xs:attribute name="SourceDataVerification" type="odm:text"/>
+		<xs:attribute name="allowAdd" type="odm:text"/>
 	</xs:attributeGroup>
 
 	<xs:attributeGroup name="ItemGroupDetailsAttributeDefinition">
