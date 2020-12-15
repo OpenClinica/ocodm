@@ -696,6 +696,7 @@
             <xs:attribute  name="Repeating" type="YesOrNo" use="required"/>
             <xs:attribute  name="Type" type="EventType" use="required"/>
             <xs:attribute  name="Category" type="text"/>
+            <xs:attribute  name="Status" type="oidref"/>
         </xs:attributeGroup>           
         
         <xs:attributeGroup name="FormDefAttributeDefinition">
@@ -853,6 +854,7 @@
             <xs:attribute  name="OrderNumber" type="integer"/>
             <xs:attribute  name="Mandatory" type="YesOrNo" use="required"/>
             <xs:attribute  name="CollectionExceptionConditionOID" type="oidref"/>
+            <xs:attribute  name="Status" type="oidref"/>
         </xs:attributeGroup>           
 
         <xs:attributeGroup name="FormalExpressionAttributeDefinition">
