@@ -479,6 +479,8 @@
 	<xs:attribute name="DateOfBirth" type="odm:date" />
 	<xs:attribute name="YearOfBirth" type="odm:integer" />
 	<xs:attribute name="Sex" type="odm:text" />
+	<xs:attribute name="Epoch" type="odm:text" />
+	<xs:attribute name="StudyCalendar" type="odm:text" />
 <!-- StudyEventDataAttributeExtension -->
 	<xs:attribute name="StudyEventLocation" type="odm:text" />
     <xs:attribute name="EventName" type="odm:text" />
@@ -501,6 +503,9 @@
 	<xs:attribute name="UpdatedBy" type="odm:text" />
 	<xs:attribute name="CreatedDate" type="dateOrDatetime" />
 	<xs:attribute name="UpdatedDate" type="dateOrDatetime" />
+	<xs:attribute name="Required" type="odm:text" />
+	<xs:attribute name="Visible" type="odm:text" />
+	<xs:attribute name="Editable" type="odm:text" />
     <xs:attribute name="VersionDescription" type="odm:text" />
     <xs:attribute name="Url" type="odm:text" />
     <xs:attribute name="StatusChangeTimeStamp" type="dateOrDatetime" />

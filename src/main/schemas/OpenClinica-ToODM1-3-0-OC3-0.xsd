@@ -115,6 +115,8 @@
 			<xs:attribute ref="OpenClinica:DateOfBirth" />
 			<xs:attribute ref="OpenClinica:YearOfBirth" />
 			<xs:attribute ref="OpenClinica:Sex" />
+			<xs:attribute ref="OpenClinica:Epoch" />
+			<xs:attribute ref="OpenClinica:StudyCalendar" />
 		</xs:attributeGroup>		
 		<xs:attributeGroup name="StudyEventDataAttributeExtension">
 			<xs:attributeGroup ref="StudyEventDataAttributeExtension"/>
@@ -144,6 +146,9 @@
 			<xs:attribute ref="OpenClinica:WorkflowStatus" />
 			<xs:attribute ref="OpenClinica:Removed" />
 			<xs:attribute ref="OpenClinica:Archived" />
+			<xs:attribute ref="OpenClinica:Required" />
+			<xs:attribute ref="OpenClinica:Visible" />
+			<xs:attribute ref="OpenClinica:Editable" />
             <xs:attribute ref="OpenClinica:FormName" />
             <xs:attribute ref="OpenClinica:Description" />
             <xs:attribute ref="OpenClinica:VersionDescription" />
