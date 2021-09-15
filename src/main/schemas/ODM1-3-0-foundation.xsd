@@ -1035,7 +1035,8 @@
         +===========================================================================+
     -->
 
-        <xs:group name="IncludeElementExtension">            <xs:sequence/> </xs:group>            
+        <xs:group name="ItemRefAttributeExtension">            <xs:sequence/> </xs:group>
+        <xs:group name="IncludeElementExtension">            <xs:sequence/> </xs:group>
         <xs:group name="StudyEventRefElementExtension">      <xs:sequence/> </xs:group>      
         <xs:group name="FormRefElementExtension">            <xs:sequence/> </xs:group>            
         <xs:group name="ItemGroupRefElementExtension">       <xs:sequence/> </xs:group>       
@@ -1416,6 +1417,7 @@
         <xs:complexType name="ODMcomplexTypeDefinition-FormRef">
           <xs:sequence>
             <xs:group        ref="FormRefElementExtension" minOccurs="0"/>
+            <xs:element       ref="SDVItems" minOccurs="0" maxOccurs="1"/>
           </xs:sequence>
           <xs:attributeGroup ref="FormRefAttributeDefinition"/>
           <xs:attributeGroup ref="RefAttributeSharedDefinition"/>
@@ -1590,7 +1592,13 @@
           </xs:sequence>
           <xs:attributeGroup ref="BasicDefinitionsAttributeExtension"/>
         </xs:complexType>
-        
+
+        <xs:complexType name="ODMcomplexTypeDefinition-SdvItems">
+            <xs:sequence>
+                <xs:element      ref="ItemRef" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+
         <xs:complexType name="ODMcomplexTypeDefinition-MeasurementUnit">
           <xs:sequence>
             <xs:element      ref="Symbol"/>
@@ -2378,7 +2386,7 @@
         <xs:element name="BasicDefinitions"      type="ODMcomplexTypeDefinition-BasicDefinitions"/>
         <xs:element name="MeasurementUnit"       type="ODMcomplexTypeDefinition-MeasurementUnit"/>
         <xs:element name="Symbol"                type="ODMcomplexTypeDefinition-Symbol"/>
-                                                 
+        <xs:element name="SDVItems"               type="ODMcomplexTypeDefinition-SdvItems"/>
         <xs:element name="MetaDataVersion"       type="ODMcomplexTypeDefinition-MetaDataVersion">
           <xs:unique name="UC-MDV-1">
             <xs:selector xpath="StudyEventDef"/>

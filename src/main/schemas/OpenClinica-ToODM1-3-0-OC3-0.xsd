@@ -87,7 +87,10 @@
 			</xs:sequence>
 		</xs:group>
 
-
+		<xs:attributeGroup name="ItemRefAttributeExtension">
+				<xs:attributeGroup ref="ItemRefAttributeExtension" />
+			    <xs:attribute ref="OpenClinica:SourceDataVerificationCode"/>
+		</xs:attributeGroup>
 
         <xs:attributeGroup name="ClinicalDataAttributeExtension">
             <xs:attributeGroup ref="ClinicalDataAttributeExtension"/>
