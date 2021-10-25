@@ -499,6 +499,7 @@
     <xs:attribute name="FormName" type="odm:text" />
     <xs:attribute name="Description" type="odm:text" />
 	<xs:attribute name="SdvStatus" type="odm:text" />
+	<xs:attribute name="SourceDataVerificationCode" type="odm:text" />
 	<xs:attribute name="CreatedBy" type="odm:text" />
 	<xs:attribute name="UpdatedBy" type="odm:text" />
 	<xs:attribute name="CreatedDate" type="dateOrDatetime" />
