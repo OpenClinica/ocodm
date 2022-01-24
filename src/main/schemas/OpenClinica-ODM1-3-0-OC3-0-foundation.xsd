@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema targetNamespace="http://www.openclinica.org/ns/odm_ext_v130/v3.1"
-           xmlns="http://www.openclinica.org/ns/odm_ext_v130/v3.1"
-           xmlns:odm="http://www.cdisc.org/ns/odm/v1.3"
-           xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           elementFormDefault="qualified" attributeFormDefault="unqualified">
-  <!--<xs:import schemaLocation="http://www.w3.org/2001/03/xml.xsd" namespace="http://www.w3.org/XML/1998/namespace" /> -->
-  <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="xml.xsd"/>
-  <xs:import schemaLocation="ODM1-3-0.xsd" namespace="http://www.cdisc.org/ns/odm/v1.3" />
-    <xs:simpleType name="dateOrDatetime">
-          <xs:restriction base="xs:string">
-            <xs:pattern   value="[0-9][0-9][0-9][0-9]-[0-1][0-9]-[0-3][0-9](T[0-2][0-9]:[0-5][0-9]:[0-5][0-9](\.[0-9]+)?)?((\+|-)[0-2][0-9]:[0-5][0-9])?"/>
-          </xs:restriction>
-    </xs:simpleType>
+		   xmlns="http://www.openclinica.org/ns/odm_ext_v130/v3.1"
+		   xmlns:odm="http://www.cdisc.org/ns/odm/v1.3"
+		   xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		   elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!--<xs:import schemaLocation="http://www.w3.org/2001/03/xml.xsd" namespace="http://www.w3.org/XML/1998/namespace" /> -->
+	<xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="xml.xsd"/>
+	<xs:import schemaLocation="ODM1-3-0.xsd" namespace="http://www.cdisc.org/ns/odm/v1.3" />
+	<xs:simpleType name="dateOrDatetime">
+		<xs:restriction base="xs:string">
+			<xs:pattern   value="[0-9][0-9][0-9][0-9]-[0-1][0-9]-[0-3][0-9](T[0-2][0-9]:[0-5][0-9]:[0-5][0-9](\.[0-9]+)?)?((\+|-)[0-2][0-9]:[0-5][0-9])?"/>
+		</xs:restriction>
+	</xs:simpleType>
 
-    <xs:complexType name="OCodmComplexTypeDefinition-MultiSelectListRef">
+	<xs:complexType name="OCodmComplexTypeDefinition-MultiSelectListRef">
 		<xs:sequence>
 			<xs:group ref="MultiSelectListRefElementExtension" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
@@ -107,11 +107,11 @@
 	</xs:complexType>
 	<xs:complexType name="OCodmComplexTypeDefinition-Age">
 		<xs:simpleContent>
-        	<xs:extension        base="odm:text">
-              <xs:attributeGroup ref="AgeAttributeDefinition"/>
-              <xs:attributeGroup ref="AgeAttributeExtension"/>
-            </xs:extension>
-        </xs:simpleContent>
+			<xs:extension        base="odm:text">
+				<xs:attributeGroup ref="AgeAttributeDefinition"/>
+				<xs:attributeGroup ref="AgeAttributeExtension"/>
+			</xs:extension>
+		</xs:simpleContent>
 	</xs:complexType>
 	<xs:complexType name="OCodmComplexTypeDefinition-FacilityInformation">
 		<xs:sequence>
@@ -173,7 +173,7 @@
 		<xs:attributeGroup ref="StudyParameterListItemAttributeExtension"/>
 	</xs:complexType>
 
-		<xs:complexType name="OCodmComplexTypeDefinition-ConfigurationParameters">
+	<xs:complexType name="OCodmComplexTypeDefinition-ConfigurationParameters">
 		<xs:attributeGroup ref="ConfigurationParametersAttributeDefinition"/>
 	</xs:complexType>
 
@@ -187,8 +187,8 @@
 
 	<xs:complexType name="OCodmComplexTypeDefinition-FormLayoutDef">
 		<xs:sequence>
-		<xs:element name="URL" type="odm:text" minOccurs="0" maxOccurs="1"/>
-		<xs:group ref="FormLayoutDefElementExtension" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="URL" type="odm:text" minOccurs="0" maxOccurs="1"/>
+			<xs:group ref="FormLayoutDefElementExtension" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 		<xs:attributeGroup ref="FormLayoutDefAttributeDefinition"/>
 	</xs:complexType>
@@ -225,9 +225,9 @@
 	<xs:attributeGroup name="ConfigurationParametersAttributeDefinition">
 		<xs:attribute name="HideCRF" type="odm:text"/>
 		<xs:attribute name="ParticipantForm" type="odm:text"/>
-		<xs:attribute name="AllowAnonymousSubmission" type="odm:text"/>
-		<xs:attribute name="SubmissionUrl" type="odm:text"/>
-		<xs:attribute name="Offline" type="odm:text"/>
+		<xs:attribute name="SurveyRegisterForm" type="odm:text"/>
+		<xs:attribute name="FormUrl" type="odm:text"/>
+		<xs:attribute name="OfflineForm" type="odm:text"/>
 		<xs:attribute name="SourceDataVerificationCode" type="odm:text"/>
 		<xs:attribute name="allowAdd" type="odm:text"/>
 	</xs:attributeGroup>
@@ -381,7 +381,7 @@
 
 
 
-    <xs:group name="MultiSelectListRefElementExtension"> <xs:sequence/>  </xs:group>
+	<xs:group name="MultiSelectListRefElementExtension"> <xs:sequence/>  </xs:group>
 	<xs:group name="MultiSelectListElementExtension"> <xs:sequence/>  </xs:group>
 	<xs:group name="MultiSelectListItemElementExtension"> <xs:sequence/>  </xs:group>
 	<xs:group name="StudyGroupClassListElementExtension"> <xs:sequence/>  </xs:group>
@@ -462,16 +462,16 @@
 	<xs:element name="DiscrepancyNote" type="OCodmComplexTypeDefinition-DiscrepancyNote"/>
 	<xs:element name="ChildNote" type="OCodmComplexTypeDefinition-ChildNote"/>
 
-<!-- ClinicalDataAttributeExtension -->
-    <xs:attribute name="StudyName" type="odm:text" />
-<!-- FormDefAttributeExtension -->
+	<!-- ClinicalDataAttributeExtension -->
+	<xs:attribute name="StudyName" type="odm:text" />
+	<!-- FormDefAttributeExtension -->
 	<xs:attribute name="StudyEventOIDs" type="odm:text" />
-<!-- ItemDefAttributeExtension -->
+	<!-- ItemDefAttributeExtension -->
 	<xs:attribute name="FormOIDs" type="odm:text" />
-<!-- QuestionAttributeExtension -->
+	<!-- QuestionAttributeExtension -->
 	<xs:attribute name="QuestionNumber" type="odm:text" />
 
-<!--  SubjectDataAttributeExtension  -->
+	<!--  SubjectDataAttributeExtension  -->
 	<xs:attribute name="StudySubjectID" type="odm:text" />
 	<xs:attribute name="UniqueIdentifier" type="odm:text" />
 	<xs:attribute name="Status" type="odm:text" />
@@ -481,9 +481,9 @@
 	<xs:attribute name="Sex" type="odm:text" />
 	<xs:attribute name="Epoch" type="odm:text" />
 	<xs:attribute name="StudyCalendar" type="odm:text" />
-<!-- StudyEventDataAttributeExtension -->
+	<!-- StudyEventDataAttributeExtension -->
 	<xs:attribute name="StudyEventLocation" type="odm:text" />
-    <xs:attribute name="EventName" type="odm:text" />
+	<xs:attribute name="EventName" type="odm:text" />
 	<xs:attribute name="StartDate" type="dateOrDatetime" />
 	<xs:attribute name="EndDate" type="dateOrDatetime" />
 	<xs:attribute name="SubjectAgeAtEvent" type="odm:integer" />
@@ -492,12 +492,12 @@
 	<xs:attribute name="Locked" type="odm:text" />
 	<xs:attribute name="Removed" type="odm:text" />
 	<xs:attribute name="Archived" type="odm:text" />
-<!-- FormDataAttributeExtension -->
+	<!-- FormDataAttributeExtension -->
 	<xs:attribute name="FormLayoutOID" type="odm:text" />
 	<xs:attribute name="InterviewerName" type="odm:text" />
 	<xs:attribute name="InterviewDate" type="odm:date" />
-    <xs:attribute name="FormName" type="odm:text" />
-    <xs:attribute name="Description" type="odm:text" />
+	<xs:attribute name="FormName" type="odm:text" />
+	<xs:attribute name="Description" type="odm:text" />
 	<xs:attribute name="SdvStatus" type="odm:text" />
 	<xs:attribute name="SourceDataVerificationCode" type="odm:text" />
 	<xs:attribute name="CreatedBy" type="odm:text" />
@@ -507,10 +507,10 @@
 	<xs:attribute name="Required" type="odm:text" />
 	<xs:attribute name="Visible" type="odm:text" />
 	<xs:attribute name="Editable" type="odm:text" />
-    <xs:attribute name="VersionDescription" type="odm:text" />
-    <xs:attribute name="Url" type="odm:text" />
-    <xs:attribute name="StatusChangeTimeStamp" type="dateOrDatetime" />
-<!-- ItemDataAttributeExtension -->
+	<xs:attribute name="VersionDescription" type="odm:text" />
+	<xs:attribute name="Url" type="odm:text" />
+	<xs:attribute name="StatusChangeTimeStamp" type="dateOrDatetime" />
+	<!-- ItemDataAttributeExtension -->
 	<xs:attribute name="ReasonForNull" type="odm:text" />
 
 
@@ -528,10 +528,10 @@
 	</xs:attributeGroup>
 
 	<xs:attributeGroup name="MultiSelectListItemAttributeDefinition">
-        <xs:attribute  name="CodedOptionValue" type="odm:value" use="required"/>
-    </xs:attributeGroup>
+		<xs:attribute  name="CodedOptionValue" type="odm:value" use="required"/>
+	</xs:attributeGroup>
 
-    <xs:attributeGroup name="StudyGroupClassListAttributeDefinition">
+	<xs:attributeGroup name="StudyGroupClassListAttributeDefinition">
 		<xs:attribute name="ID" type="odm:oid" use="required"/>
 		<xs:attribute name="Name" type="odm:text"/>
 		<xs:attribute name="Type" type="odm:text"/>
@@ -572,8 +572,8 @@
 	</xs:attributeGroup>
 
 	<xs:attributeGroup name="StudyParameterListItemAttributeDefinition">
-        <xs:attribute  name="CodedParameterValue" type="odm:value" use="required"/>
-    </xs:attributeGroup>
+		<xs:attribute  name="CodedParameterValue" type="odm:value" use="required"/>
+	</xs:attributeGroup>
 
 	<xs:attributeGroup name="AgeAttributeDefinition">
 		<xs:attribute name="MinimumAge" type="odm:text"/>
