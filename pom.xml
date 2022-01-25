@@ -4,71 +4,95 @@
 	<groupId>org.akaza.openclinica.odm</groupId>
 	<artifactId>openclinica-odm</artifactId>
 	<packaging>jar</packaging>
-	<version>2.12</version>
+	<version>2.13</version>
 	<name>openclinica-odm</name>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
-	<dependencies/>
-	<build>
-		<plugins>
-			<plugin>
-			    <groupId>org.codehaus.mojo</groupId>
-			    <artifactId>jaxb2-maven-plugin</artifactId>
-				<version>1.6</version>
-			    <executions>
+	<dependencies>
+		<dependency>
+			<groupId>com.sun.activation</groupId>
+			<artifactId>javax.activation</artifactId>
+			<version>1.2.0</version>
+		</dependency>
 
-                    <execution>
-                        <id>schema1-generate</id>
-                        <goals>
-                            <goal>xjc</goal>
-                        </goals>
-                        <configuration>
-                            <schemaDirectory>src/main/schemas</schemaDirectory>
-                            <outputDirectory>${basedir}/src/main/java</outputDirectory>
-                            <bindingDirectory>src/main/xjb</bindingDirectory>
-                            <bindingFiles>binding-customization.xjb</bindingFiles>
-                            <clearOutputDir>false</clearOutputDir>
+		<dependency>
+			<groupId>org.glassfish.jaxb</groupId>
+			<artifactId>jaxb-runtime</artifactId>
+			<version>2.3.3</version>
+		</dependency>
 
-                        </configuration>
-                    </execution>
-			    </executions>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>2.1</version>
-				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
-				</configuration>
-			</plugin>
-			<plugin>
-				<!-- Needed to run the plugin xjc with java8 -->
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>properties-maven-plugin</artifactId>
-				<version>1.0.0</version>
-				<executions>
-					<execution>
-						<id>set-additional-system-properties</id>
-						<goals>
-							<goal>set-system-properties</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					<properties>
-						<property>
-							<name>javax.xml.accessExternalSchema</name>
-							<value>all</value>
-						</property>
-						<property>
-							<name>javax.xml.accessExternalDTD</name>
-							<value>all</value>
-						</property>
-					</properties>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
+		<dependency>
+			<groupId>org.glassfish.jaxb</groupId>
+			<artifactId>jaxb-core</artifactId>
+			<version>2.3.0.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.glassfish.jaxb</groupId>
+			<artifactId>jaxb-xjc</artifactId>
+			<version>2.3.3</version>
+		</dependency>
+
+	</dependencies>	<build>
+	<plugins>
+		<plugin>
+			<groupId>org.codehaus.mojo</groupId>
+			<artifactId>jaxb2-maven-plugin</artifactId>
+			<version>2.5.0</version>
+			<executions>
+
+				<execution>
+					<id>schema1-generate</id>
+					<goals>
+						<goal>xjc</goal>
+					</goals>
+					<configuration>
+						<sources>
+							<source>src/main/schemas</source>
+						</sources>
+						<outputDirectory>${basedir}/src/main/java</outputDirectory>
+						<clearOutputDir>false</clearOutputDir>
+
+					</configuration>
+				</execution>
+			</executions>
+		</plugin>
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-compiler-plugin</artifactId>
+			<version>2.1</version>
+			<configuration>
+				<source>1.8</source>
+				<target>1.8</target>
+			</configuration>
+		</plugin>
+		<plugin>
+			<!-- Needed to run the plugin xjc with java8 -->
+			<groupId>org.codehaus.mojo</groupId>
+			<artifactId>properties-maven-plugin</artifactId>
+			<version>1.0.0</version>
+			<executions>
+				<execution>
+					<id>set-additional-system-properties</id>
+					<goals>
+						<goal>set-system-properties</goal>
+					</goals>
+				</execution>
+			</executions>
+			<configuration>
+				<properties>
+					<property>
+						<name>javax.xml.accessExternalSchema</name>
+						<value>all</value>
+					</property>
+					<property>
+						<name>javax.xml.accessExternalDTD</name>
+						<value>all</value>
+					</property>
+				</properties>
+			</configuration>
+		</plugin>
+	</plugins>
+</build>
 </project>
