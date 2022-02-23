@@ -226,11 +226,11 @@
 		<xs:attribute name="HideCRF" type="odm:text"/>
 		<xs:attribute name="ParticipantForm" type="odm:text"/>
 		<xs:attribute name="SurveyRegisterForm" type="odm:text"/>
-		<xs:attribute name="AllowAnonymousSubmission" type="odm:text"/>
+		<xs:attribute name="PublicUrl" type="odm:text"/>
 		<xs:attribute name="FormUrl" type="odm:text"/>
 		<xs:attribute name="SubmissionUrl" type="odm:text"/>
 		<xs:attribute name="OfflineForm" type="odm:text"/>
-		<xs:attribute name="Offline" type="odm:text"/>
+		<xs:attribute name="OfflineCapable" type="odm:text"/>
 		<xs:attribute name="SourceDataVerificationCode" type="odm:text"/>
 		<xs:attribute name="allowAdd" type="odm:text"/>
 	</xs:attributeGroup>
