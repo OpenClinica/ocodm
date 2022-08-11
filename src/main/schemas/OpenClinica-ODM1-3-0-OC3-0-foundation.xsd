@@ -237,6 +237,7 @@
 		<xs:attribute name="allowAdd" type="odm:text"/>
 		<xs:attribute name="Editable" type="odm:text"/>
 		<xs:attribute name="Visible" type="odm:text"/>
+		<xs:attribute name="Econsent" type="odm:text"/>
 	</xs:attributeGroup>
 
 	<xs:attributeGroup name="FormLayoutRefAttributeDefinition">
