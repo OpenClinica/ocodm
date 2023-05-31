@@ -697,6 +697,7 @@
             <xs:attribute  name="Type" type="EventType" use="required"/>
             <xs:attribute  name="Category" type="text"/>
             <xs:attribute  name="Status" type="oidref"/>
+            <xs:attribute  name="ShowDescription" type="YesOrNo"/>
         </xs:attributeGroup>           
         
         <xs:attributeGroup name="FormDefAttributeDefinition">
