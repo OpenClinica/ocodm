@@ -134,6 +134,7 @@
 			<xs:attribute ref="OpenClinica:Removed" />
 			<xs:attribute ref="OpenClinica:Archived" />
 			<xs:attribute ref="OpenClinica:SubjectAgeAtEvent" />
+			<xs:attribute ref="OpenClinica:ShowDescription" />
 		</xs:attributeGroup>
 		<xs:attributeGroup name="FormDataAttributeExtension">
 			<xs:attributeGroup ref="FormDataAttributeExtension" />
