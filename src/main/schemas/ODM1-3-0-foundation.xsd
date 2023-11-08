@@ -705,8 +705,7 @@
             <xs:attribute  name="Name" type="name" use="required"/>
             <xs:attribute  name="Repeating" type="YesOrNo" use="required"/>
             <xs:attribute  name="Status" type="oidref"/>
-            <xs:attribute  name="ShowDescription" type="YesOrNo"/>
-        </xs:attributeGroup>           
+        </xs:attributeGroup>
         
         <xs:attributeGroup name="ItemGroupDefAttributeDefinition">
             <xs:attribute  name="OID" type="oid" use="required"/>
