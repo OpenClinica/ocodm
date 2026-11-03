@@ -70,6 +70,8 @@ public class OCodmComplexTypeDefinitionConfigurationParameters
     protected String econsent;
     @XmlAttribute(name = "ShowDescription")
     protected String showDescription;
+    @XmlAttribute(name = "AutoUpdateCrossForm")
+    protected String autoUpdateCrossForm;
 
     /**
      * Gets the value of the hideCRF property.
@@ -517,6 +519,34 @@ public class OCodmComplexTypeDefinitionConfigurationParameters
 
     public boolean isSetShowDescription() {
         return (this.showDescription!= null);
+    }
+
+    /**
+     * Gets the value of the autoUpdateCrossForm property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getAutoUpdateCrossForm() {
+        return autoUpdateCrossForm;
+    }
+
+    /**
+     * Sets the value of the autoUpdateCrossForm property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setAutoUpdateCrossForm(String value) {
+        this.autoUpdateCrossForm = value;
+    }
+
+    public boolean isSetAutoUpdateCrossForm() {
+        return (this.autoUpdateCrossForm!= null);
     }
 
 }
